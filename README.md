@@ -6,7 +6,7 @@ The coding challenge will use log services of  Aliyun Cloud solution. The Aliclo
 
 ## Architecture
 
-![image-20190109105654324](/Users/ring.chen/Library/Application Support/typora-user-images/image-20190109105654324.png)
+![image-20190109105654324](https://ws1.sinaimg.cn/large/006tNc79gy1fz0hun41snj30u00uvadi.jpg)
 
 
 

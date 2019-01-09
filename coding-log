@@ -1,0 +1,14 @@
+AccessKey ID:LTAIf5VVqBrqluuT
+Access Key Secret:Atd6BHAR1toPRHCfgIciRJjH59nngQ
+Endpoint: 
+
+
+GET /logstores HTTP 1.1
+Mon, 09 Nov 2015 06:11:16 GMT
+Host: ali-test-project.regionid.example.com
+x-log-apiversion: 0.6.0
+x-log-signaturemethod: hmac-sha1
+
+GET\n\n\nMon, 09 Nov 2015 06:11:16 GMT\nx-log-apiversion:0.6.0\nx-log-signaturemethod:hmac-sha1\n/logstores?logstoreName=&offset=0&size=1000
+
+> aliyunlog log create_project ..... --access-id=LTAIf5VVqBrqluuT --access-key=Atd6BHAR1toPRHCfgIciRJjH59nngQ --region-endpoint=<value>
