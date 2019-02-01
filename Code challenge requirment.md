@@ -1,6 +1,6 @@
 # Code challenge requirment
 
-Per talked this morning, attached please find the code challenge for 陈志铃, and kindly submit the result with mail to me/public Github **by 9Jan**, thanks. 
+Per talked this morning, attached please find the code challenge, and kindly submit the result with mail to me/public Github **by 9Jan**, thanks. 
 
 **Code Challenge**
 

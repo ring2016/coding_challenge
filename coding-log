@@ -12,3 +12,7 @@ x-log-signaturemethod: hmac-sha1
 GET\n\n\nMon, 09 Nov 2015 06:11:16 GMT\nx-log-apiversion:0.6.0\nx-log-signaturemethod:hmac-sha1\n/logstores?logstoreName=&offset=0&size=1000
 
 > aliyunlog log create_project ..... --access-id=LTAIf5VVqBrqluuT --access-key=Atd6BHAR1toPRHCfgIciRJjH59nngQ --region-endpoint=<value>
+
+
+Query:
+select top 5 count(*), [Url] from 表名 group by [Url] order by count(*) desc
