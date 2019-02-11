@@ -1,6 +1,85 @@
 AccessKey ID:LTAIf5VVqBrqluuT
 Access Key Secret:Atd6BHAR1toPRHCfgIciRJjH59nngQ
-Endpoint: 
+Endpoint: chilingchan.cn-shenzhen.log.aliyuncs.com 
+
+#### Signature公式
+
+```shell
+Signature = base64(hmac-sha1(UTF8-Encoding-Of(SignString)，AccessKeySecret))
+```
+
+#### Signstring sample
+
+```shell
+SignString = VERB + "\n"
+             + CONTENT-MD5 + "\n"
+             + CONTENT-TYPE + "\n"
+             + DATE + "\n"
+             + CanonicalizedLOGHeaders + "\n"
+             + CanonicalizedResource
+```
+
+```shell
+GET\n
+\n
+\n
+Mon, 09 Nov 2015 06:11:16 GMT\n
+x-log-apiversion:0.6.0\n
+x-log-signaturemethod:hmac-sha1\n
+/logstores?logstoreName=&offset=0&size=1000
+```
+
+#### patice
+
+```shell
+GET /?offset={offset}&size={size} HTTP/1.1
+Authorization: <AuthorizationString>
+x-log-bodyrawsize: 0
+User-Agent: <UserAgent>
+x-log-apiversion: 0.6.0
+Host: <Endpoint>
+x-log-signaturemethod: hmac-sha1
+Date: <GMT Date>
+Content-Type: application/x-protobuf
+Connection: Keep-Alive
+```
+
+```shell
+GET /?offset=0&size=500 HTTP/1.1
+Authorization: LOG LTAIf5VVqBrqluuT:8b97b376d0287610bf9081b092f1d10646e8a121
+x-log-bodyrawsize: 0
+User-Agent: <UserAgent>
+x-log-apiversion: 0.6.0
+Host: cn-shenzhen.log.aliyuncs.com
+x-log-signaturemethod: hmac-sha1
+Date: 11 Feb 2019 16:49:09 GMT
+Content-Type: application/x-protobuf
+Connection: Keep-Alive
+```
+
+Linux CLI：
+
+```shell
+curl -XGET "cn-shenzhen.log.aliyuncs.com/?offset=0&size=500/Authorization=LOG LTAIf5VVqBrqluuT:8b97b376d0287610bf9081b092f1d10646e8a121/x-log-bodyrawsize=0/x-log-apiversion=0.6.0/Host=cn-shenzhen.log.aliyuncs.com/x-log-signaturemethod=hmac-sha1/Date= 11 Feb 2019 16:49:09 GMT/Content-Type=application/x-protobuf/Connection=Keep-Alive"
+```
+
+
+
+Hmac-hash64签名：
+
+```shell
+GET\n\nMon, 11 Feb 2019 16:49:09 GMT\nContent-Type:application/x-protobuf\nx-log-apiversion:0.6.0\nx-log-signaturemethod:hmac-sha1\n
+/?offset={0}&size={500}
+```
+
+经过hmac-hash64签名后，输出：
+
+```shell
+8b97b376d0287610bf9081b092f1d10646e8a121
+```
+
+
+
 
 
 GET /logstores HTTP 1.1
