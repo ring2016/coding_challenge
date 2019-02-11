@@ -13,6 +13,14 @@ GET\n\n\nMon, 09 Nov 2015 06:11:16 GMT\nx-log-apiversion:0.6.0\nx-log-signaturem
 
 > aliyunlog log create_project ..... --access-id=LTAIf5VVqBrqluuT --access-key=Atd6BHAR1toPRHCfgIciRJjH59nngQ --region-endpoint=<value>
 
-
 Query:
 select top 5 count(*), [Url] from 表名 group by [Url] order by count(*) desc
+
+## 数据分析
+
+> 参考文献：https://www.jianshu.com/p/595e2d1bc62a
+
+1. 平均访问时长：
+
+![image-20190211131235428](/Users/ring.chen/Library/Application Support/typora-user-images/image-20190211131235428.png)
+
